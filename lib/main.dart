@@ -64,7 +64,38 @@ class _MyHomePageState extends State<MyHomePage> {
                 Padding(
                     padding: EdgeInsets.only(
                         top: MediaQuery.of(context).size.height * .1)),
-                Stack(children: const [])
+                Stack(children: const [
+                  SwipeCard(
+                      age: 21,
+                      name: "Eric",
+                      imageURL: "assets/Eric.png",
+                      description: "Allons boire un verre !"),
+                  SwipeCard(
+                    description: "Je ne dis pas non à une expo, ou un cinéma",
+                    age: 22,
+                    name: "Pablo",
+                    imageURL: "assets/Pablo.png",
+                  ),
+                  SwipeCard(
+                    description: "Ma maman dit que je suis le plus beau",
+                    age: 22,
+                    name: "Quentin",
+                    imageURL: "assets/Quentin.png",
+                  ),
+                  SwipeCard(
+                    description: "Un flow de déesse grecque",
+                    age: 22,
+                    name: "Rita",
+                    imageURL: "assets/Rita.png",
+                  ),
+                  SwipeCard(
+                    age: 21,
+                    name: "Vik",
+                    imageURL: "assets/Vik.png",
+                    description:
+                        "Je m'appel Victoria, mais tu peux m'appeler quand tu veux ;)",
+                  ),
+                ])
               ]),
             ]),
           ],
