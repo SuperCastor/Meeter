@@ -93,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     name: "Vik",
                     imageURL: "assets/Vik.png",
                     description:
-                        "Je m'appel Victoria, mais tu peux m'appeler quand tu veux ;)",
+                        "Je m'appelle Victoria, mais tu peux m'appeler quand tu veux ;)",
                   ),
                 ])
               ]),
