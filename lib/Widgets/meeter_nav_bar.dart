@@ -22,6 +22,8 @@ class MeeterBarState extends State<MeeterBar> {
     return SizedBox(
         height: MediaQuery.of(context).size.height * .06,
         child: BottomNavigationBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
           type: BottomNavigationBarType.fixed,
           iconSize: 20,
           showSelectedLabels: false,

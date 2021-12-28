@@ -1,6 +1,6 @@
-import 'package:app/Widgets/gradient_icon.dart';
 import 'package:app/Widgets/meeter_nav_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:app/Widgets/swipeable_card.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,23 +32,19 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize:
+            Size.fromHeight(MediaQuery.of(context).size.height * .06),
+        child: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+        ),
+      ),
       bottomNavigationBar: const MeeterBar(),
       body: Center(
         child: Column(
           children: [
-            Padding(
-                padding: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height * .035)),
-            SizedBox(
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height * .05,
-                child: Container(color: Colors.grey)),
-            SizedBox(
-                width: MediaQuery.of(context).size.width * .95,
-                height: MediaQuery.of(context).size.height * .855,
-                child: Card(
-                  color: Colors.black,
-                )),
+            Stack(children: const [SwipeCard()]),
           ],
         ),
       ),
