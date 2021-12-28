@@ -64,13 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Padding(
                     padding: EdgeInsets.only(
                         top: MediaQuery.of(context).size.height * .1)),
-                Stack(children: const [
-                  SwipeCard(title: "1"),
-                  SwipeCard(title: "2"),
-                  SwipeCard(title: "3"),
-                  SwipeCard(title: "4"),
-                  SwipeCard(title: "5"),
-                ])
+                Stack(children: const [])
               ]),
             ]),
           ],
