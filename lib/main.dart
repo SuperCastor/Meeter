@@ -32,19 +32,47 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize:
-            Size.fromHeight(MediaQuery.of(context).size.height * .06),
-        child: AppBar(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-        ),
-      ),
       bottomNavigationBar: const MeeterBar(),
       body: Center(
         child: Column(
           children: [
-            Stack(children: const [SwipeCard()]),
+            Stack(children: [
+              Positioned(
+                  top: 0.0,
+                  left: 0.0,
+                  right: 0.0,
+                  child: PreferredSize(
+                      preferredSize: Size.fromHeight(
+                          MediaQuery.of(context).size.height * .05),
+                      child: AppBar(
+                        title: Row(children: [
+                          InkWell(
+                            onTap: () {
+                              print("Open Profile Page");
+                            },
+                            child: const CircleAvatar(
+                              radius: 15,
+                              foregroundImage:
+                                  AssetImage("assets/valentin.png"),
+                            ),
+                          )
+                        ]),
+                        backgroundColor: Colors.white,
+                        elevation: 0,
+                      ))),
+              Column(children: [
+                Padding(
+                    padding: EdgeInsets.only(
+                        top: MediaQuery.of(context).size.height * .1)),
+                Stack(children: const [
+                  SwipeCard(title: "1"),
+                  SwipeCard(title: "2"),
+                  SwipeCard(title: "3"),
+                  SwipeCard(title: "4"),
+                  SwipeCard(title: "5"),
+                ])
+              ]),
+            ]),
           ],
         ),
       ),
