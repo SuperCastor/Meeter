@@ -48,7 +48,33 @@ class _MyHomePageState extends State<MyHomePage> {
                         title: Row(children: [
                           InkWell(
                             onTap: () {
-                              print("Open Profile Page");
+                              Navigator.push(
+                                  context,
+                                  PageRouteBuilder(
+                                    transitionsBuilder: (context, animation,
+                                        secondaryAnimation, child) {
+                                      return AlignTransition(
+                                        alignment: Alignment.topCenter,
+                                        scale: Tween<double>(begin: 0.1, end: 1)
+                                            .animate(
+                                          CurvedAnimation(
+                                            parent: animation,
+                                            curve: Curves.bounceIn,
+                                          ),
+                                        ),
+                                        child: child,
+                                      );
+                                    },
+                                    pageBuilder: (BuildContext context,
+                                        Animation<double> animation,
+                                        Animation<double> secondaryAnimation) {
+                                      return Scaffold(
+                                        body: Column(children: [
+                                          Center(child: Text("Profile"))
+                                        ]),
+                                      );
+                                    },
+                                  ));
                             },
                             child: const CircleAvatar(
                               radius: 15,
