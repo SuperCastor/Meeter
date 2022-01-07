@@ -127,7 +127,7 @@ To get a local copy up and running follow these simple example steps.
 <!-- CONTACT -->
 ## Contact
 
-[Valentin PORCHEZ](https://linkedin.com/valentinporchez) - valentin.porchez@epitech.eu
+[Valentin PORCHEZ](https://www.linkedin.com/in/valentinporchez/) - valentin.porchez@epitech.eu
 
 Project Link: [https://github.com/SuperCastor/Meeter/](https://github.com/SuperCastor/Meeter/)
 
